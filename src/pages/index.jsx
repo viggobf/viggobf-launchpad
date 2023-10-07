@@ -25,10 +25,43 @@ function LaunchpadLink(props) {
 var num = 0
 
 export default function Home() {
-  var currentDate = new Date()
   var [linkElArray, setLinkElArray] = useState()
 
-  var [dateTime, setDateTime] = useState(currentDate.getUTCMonth().toString().replace('0', 'Jan ').replace('1', 'Feb ').replace('2', 'Mar ').replace('3', 'Apr ').replace('4', 'May ').replace('5', 'Jun ').replace('6', 'Jul ').replace('7', 'Aug ').replace('8', 'Sep ').replace('9', 'Oct ').replace('10', 'Nov ').replace('11', 'Dec ') + ' ' + currentDate.getUTCDate() + ', ' + currentDate.getUTCFullYear().toString() + ' ' + currentDate.getHours() + ':' + currentDate.getMinutes().toString().replace('0', '00').replace('1', '01').replace('2', '02').replace('3', '03').replace('4', '04').replace('5', '05').replace('6', '06').replace('7', '07').replace('8', '08').replace('9', '09'))
+  // set initial date/time
+  var currentDate = new Date()
+
+  if (currentDate.getMinutes() < 10) {
+    var currentDateMins = currentDate.getMinutes().toString()
+      .replace('0', '00').replace('1', '01').replace('2', '02')
+      .replace('3', '03').replace('4', '04').replace('5', '05')
+      .replace('6', '06').replace('7', '07').replace('8', '08')
+      .replace('9', '09')
+  } else {
+    var currentDateMins = currentDate.getMinutes()
+  }
+
+  if (currentDate.getHours() < 10) {
+    var currentDateHrs = currentDate.getHours().toString()
+      .replace('0', '00').replace('1', '01').replace('2', '02')
+      .replace('3', '03').replace('4', '04').replace('5', '05')
+      .replace('6', '06').replace('7', '07').replace('8', '08')
+      .replace('9', '09')
+  } else {
+    var currentDateHrs = currentDate.getHours()
+  }
+
+  var [dateTime, setDateTime] = useState(
+    currentDate.getUTCMonth().toString()
+      .replace('0', 'Jan ').replace('1', 'Feb ')
+      .replace('2', 'Mar ').replace('3', 'Apr ')
+      .replace('4', 'May ').replace('5', 'Jun ')
+      .replace('6', 'Jul ').replace('7', 'Aug ')
+      .replace('8', 'Sep ').replace('9', 'Oct ')
+      .replace('10', 'Nov ').replace('11', 'Dec ')
+    + ' ' + currentDate.getUTCDate() + ', ' + currentDate.getUTCFullYear().toString() + ' ' +
+    currentDateHrs + ':'
+    + currentDateMins
+  )
 
   useEffect(() => {
     console.log('hej')
@@ -47,7 +80,36 @@ export default function Home() {
   setInterval(() => {
     var currentDate = new Date()
 
-    setDateTime(currentDate.getUTCMonth().toString().replace('0', 'Jan ').replace('1', 'Feb ').replace('2', 'Mar ').replace('3', 'Apr ').replace('4', 'May ').replace('5', 'Jun ').replace('6', 'Jul ').replace('7', 'Aug ').replace('8', 'Sep ').replace('9', 'Oct ').replace('10', 'Nov ').replace('11', 'Dec ') + ' ' + currentDate.getUTCDate() + ', ' + currentDate.getUTCFullYear().toString() + ' ' + currentDate.getHours() + ':' + currentDate.getMinutes().toString().replace('0', '00').replace('1', '01').replace('2', '02').replace('3', '03').replace('4', '04').replace('5', '05').replace('6', '06').replace('7', '07').replace('8', '08').replace('9', '09'))
+    if (currentDate.getMinutes() < 10) {
+      var currentDateMins = currentDate.getMinutes().toString()
+        .replace('0', '00').replace('1', '01').replace('2', '02')
+        .replace('3', '03').replace('4', '04').replace('5', '05')
+        .replace('6', '06').replace('7', '07').replace('8', '08')
+        .replace('9', '09')
+    } else {
+      var currentDateMins = currentDate.getMinutes()
+    }
+
+    if (currentDate.getHours() < 10) {
+      var currentDateHrs = currentDate.getHours().toString()
+        .replace('0', '00').replace('1', '01').replace('2', '02')
+        .replace('3', '03').replace('4', '04').replace('5', '05')
+        .replace('6', '06').replace('7', '07').replace('8', '08')
+        .replace('9', '09')
+    } else {
+      var currentDateHrs = currentDate.getHours()
+    }
+
+    setDateTime(currentDate.getUTCMonth().toString()
+      .replace('0', 'Jan ').replace('1', 'Feb ')
+      .replace('2', 'Mar ').replace('3', 'Apr ')
+      .replace('4', 'May ').replace('5', 'Jun ')
+      .replace('6', 'Jul ').replace('7', 'Aug ')
+      .replace('8', 'Sep ').replace('9', 'Oct ')
+      .replace('10', 'Nov ').replace('11', 'Dec ')
+      + ' ' + currentDate.getUTCDate() + ', ' + currentDate.getUTCFullYear().toString() + ' ' +
+      currentDateHrs + ':'
+      + currentDateMins)
   }, 800)
 
 
@@ -90,7 +152,7 @@ export default function Home() {
 
 
 
-        <div className='bottomBar' style={{textAlign: 'right'}}>{dateTime}</div>
+        <div className='bottomBar' style={{ textAlign: 'right' }}>{dateTime}</div>
       </main>
     </>
   )
