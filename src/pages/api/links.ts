@@ -12,14 +12,3 @@ export default async function getLinkArray() {
 
   return entries.items
 }
-
-
-// interface LinkItem {
-//   displayName: string
-//   link: string
-// }
-
-// const linkArray: Array<LinkItem> = [
-//   { link: 'https://viggobf.com', displayName: 'Personal website' },
-//   { link: 'https://satchelone.com', displayName: 'Satchel One/SMHW' }
-// ]
