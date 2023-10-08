@@ -104,7 +104,7 @@ export default function Home() {
 
 
       <main>
-        <h2 style={{ marginLeft: '14.5px', marginTop: '10px' }}>{greeting}</h2><br />
+        <h2 style={{ marginTop: '10px' }}>{greeting}</h2><br />
 
         <h3>Go to URL</h3><br />
         <input onKeyDown={(e) => {
