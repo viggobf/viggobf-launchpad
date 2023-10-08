@@ -104,7 +104,7 @@ export default function Home() {
 
 
       <main>
-        <h2 style={{marginLeft: '14.5px', marginTop: '20px'}}>{greeting}</h2><br/>
+        <h2 style={{ marginLeft: '14.5px', marginTop: '10px' }}>{greeting}</h2><br />
 
         <h3>Go to URL</h3><br />
         <input onKeyDown={(e) => {
@@ -120,7 +120,9 @@ export default function Home() {
 
         <h3>Go to saved URL</h3><br />
 
-        {linkElArray}
+        <div style={{ overflowY: 'scroll', height: 'calc(100vh - 230px)' }}>
+          {linkElArray}
+        </div>
       </main>
     </>
   )
