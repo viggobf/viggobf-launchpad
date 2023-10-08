@@ -70,7 +70,6 @@ export default function Home() {
   }, [])
 
   setInterval(() => {
-    console.log('yo')
     if (date.getHours() > 11 && date.getHours() < 17) {
       setGreeting('Good afternoon')
     } else if (date.getHours() < 12) {
@@ -86,7 +85,6 @@ export default function Home() {
       var array = []
 
       linkArray.forEach((item, index) => {
-        console.log(item)
         array.push(<LaunchpadLink index={index} link={item.fields.url}>{item.fields.displayName}</LaunchpadLink>)
       })
 
