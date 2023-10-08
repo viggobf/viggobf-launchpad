@@ -61,21 +61,22 @@ export default function Home() {
 
   useEffect(() => {
     if (date.getHours() > 11 && date.getHours() < 17) {
-      setGreeting('Good afternoon, Viggo')
+      setGreeting('Good afternoon')
     } else if (date.getHours() < 12) {
-      setGreeting('Good morning, Viggo')
+      setGreeting('Good morning')
     } else if (date.getHours() > 17) {
-      setGreeting('Good evening, Viggo')
+      setGreeting('Good evening')
     }
   }, [])
 
   setInterval(() => {
+    console.log('yo')
     if (date.getHours() > 11 && date.getHours() < 17) {
-      setGreeting('Good afternoon, Viggo')
+      setGreeting('Good afternoon')
     } else if (date.getHours() < 12) {
-      setGreeting('Good morning, Viggo')
+      setGreeting('Good morning')
     } else if (date.getHours() > 17) {
-      setGreeting('Good evening, Viggo')
+      setGreeting('Good evening')
     }
   }, 60000)
 
@@ -103,7 +104,7 @@ export default function Home() {
 
 
       <main>
-        <h2>{greeting}</h2><br/>
+        <h2 style={{marginLeft: '14.5px', marginTop: '20px'}}>{greeting}</h2><br/>
 
         <h3>Go to URL</h3><br />
         <input onKeyDown={(e) => {
