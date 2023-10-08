@@ -42,7 +42,7 @@ export default function Page() {
                 <div style={{ height: '48px', marginLeft: '2px' }}>
                     <button title='Go back to launchpad' style={{ width: 'fit-content', float: 'left', marginRight: '8px', marginTop: '2px' }} onClick={() => { router.push('/') }}><ArrowBackRounded style={{ fontSize: 'large' }} /></button>
                     <div style={{ float: 'left' }}>
-                        <strong style={{ marginBottom: '0' }}>{name}</strong>
+                        <strong style={{ marginBottom: '0', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>{name}</strong>
                         <h3 style={{ marginTop: '0', marginLeft: '0' }}>{link}</h3>
                     </div>
 
