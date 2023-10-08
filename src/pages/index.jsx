@@ -14,14 +14,14 @@ const inter = Inter({ subsets: ['latin'] })
 function openInputURL(ev) {
   if (document.getElementById('url')?.value) {
     if (document.getElementById('url')?.value.includes('https://') || document.getElementById('url')?.value.includes('http://')) {
-      if (ev.shiftKey) {
+      if (!ev.shiftKey) {
         Router.push(document.getElementById('url')?.value)
       } else {
         Router.push('/page/' + encodeURIComponent(document.getElementById('url')?.value))
       }
 
     } else {
-      if (ev.shiftKey) {
+      if (!ev.shiftKey) {
         Router.push('https://' + document.getElementById('url')?.value)
       } else {
         Router.push('/page/https%3A%2F%2F' + encodeURIComponent(document.getElementById('url')?.value))
@@ -32,7 +32,7 @@ function openInputURL(ev) {
 
 function LaunchpadLink(props) {
   return <button className='link' onClick={(ev) => {
-    if (ev.shiftKey) {
+    if (!ev.shiftKey) {
       Router.push(props.link)
     } else {
       Router.push('/page/' + props.index.toString())
