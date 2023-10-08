@@ -79,6 +79,12 @@ h3 {
   margin-left: 15px;
 }
 
+h2 {
+  margin-left: 14px;
+  margin-bottom: -10px;
+  margin-top: 14px;
+}
+
 button:hover {
   transition: background 0.2s;
   background-color: rgba(236, 236, 236);

@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import { ArrowForwardRounded } from '@mui/icons-material'
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 function openInputURL(ev) {
@@ -54,6 +55,30 @@ var num = 0
 export default function Home() {
   var [linkElArray, setLinkElArray] = useState()
 
+  var [greeting, setGreeting] = useState()
+
+  var date = new Date()
+
+  useEffect(() => {
+    if (date.getHours() > 11 && date.getHours() < 17) {
+      setGreeting('Good afternoon, Viggo')
+    } else if (date.getHours() < 12) {
+      setGreeting('Good morning, Viggo')
+    } else if (date.getHours() > 17) {
+      setGreeting('Good evening, Viggo')
+    }
+  }, [])
+
+  setInterval(() => {
+    if (date.getHours() > 11 && date.getHours() < 17) {
+      setGreeting('Good afternoon, Viggo')
+    } else if (date.getHours() < 12) {
+      setGreeting('Good morning, Viggo')
+    } else if (date.getHours() > 17) {
+      setGreeting('Good evening, Viggo')
+    }
+  }, 60000)
+
 
   useEffect(() => {
     getLinkArray().then((linkArray) => {
@@ -78,9 +103,11 @@ export default function Home() {
 
 
       <main>
+        <h2>{greeting}</h2><br/>
+
         <h3>Go to URL</h3><br />
         <input onKeyDown={(e) => {
-          if (e.key === 'Enter'){
+          if (e.key === 'Enter') {
             openInputURL(e)
           }
         }} id='url' style={{ marginLeft: '8px', float: 'left', width: 'calc(100vw - 90px)', marginRight: '6px' }} placeholder='Type a URL' />
