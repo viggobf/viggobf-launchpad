@@ -39,7 +39,7 @@ input {
   width: 100vw;
   box-sizing: border-box;
   background-color: var(--translucentBackgroundColor);
-  border-top: 0px solid var(--grey);
+  border-top: 0.4px solid var(--grey);
   color: var(--grey);
   padding: 10px;
   font-size: 13px;

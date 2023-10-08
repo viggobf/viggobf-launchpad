@@ -120,7 +120,7 @@ export default function Home() {
 
         <h3>Go to saved URL</h3><br />
 
-        <div style={{ overflowY: 'scroll', height: 'calc(100vh - 230px)' }}>
+        <div style={{ overflowY: 'scroll', height: 'calc(100vh - 205px)', paddingBottom: '10px', boxSizing: 'border-box' }}>
           {linkElArray}
         </div>
       </main>
