@@ -64,7 +64,7 @@ export default function Home() {
       setGreeting('Good afternoon')
     } else if (date.getHours() < 12) {
       setGreeting('Good morning')
-    } else if (date.getHours() > 17) {
+    } else if (date.getHours() >= 17) {
       setGreeting('Good evening')
     }
   }, [])
@@ -74,7 +74,7 @@ export default function Home() {
       setGreeting('Good afternoon')
     } else if (date.getHours() < 12) {
       setGreeting('Good morning')
-    } else if (date.getHours() > 17) {
+    } else if (date.getHours() >= 17) {
       setGreeting('Good evening')
     }
   }, 60000)
