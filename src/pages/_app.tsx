@@ -28,12 +28,13 @@ function getTimeStr(): string {
 
 
   return currentDate.getUTCMonth().toString()
+    .replace('10', 'Nov ').replace('11', 'Dec ')
     .replace('0', 'Jan ').replace('1', 'Feb ')
     .replace('2', 'Mar ').replace('3', 'Apr ')
     .replace('4', 'May ').replace('5', 'Jun ')
     .replace('6', 'Jul ').replace('7', 'Aug ')
     .replace('8', 'Sep ').replace('9', 'Oct ')
-    .replace('10', 'Nov ').replace('11', 'Dec ')
+    
     + ' ' + currentDate.getUTCDate() + ', ' + currentDate.getUTCFullYear().toString() + ' ' +
     currentDateHrs + ':'
     + currentDateMins
