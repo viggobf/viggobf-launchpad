@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@100;200;300;400;500;600;700;800;900;1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@100;200;300;400;500;600;700;800;900;1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@100;200;300;400;500;600;700;800;900;1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Work+Sans:wght@400;500&display=swap');
 
 :root {
-  font-family: 'Rethink Sans';
+  font-family: 'Instrument Sans';
   --grey: rgb(160, 160, 160) !important;
   --backgroundColor: white;
   --translucentBackgroundColor: rgba(255, 255, 255, 0.75);
@@ -28,7 +28,7 @@ input {
   padding-bottom: 6px;
   border-radius: 8px;
   border: 1px solid var(--grey);
-  font-family: 'Rethink Sans';
+  font-family: 'Instrument Sans';
   background-color: var(--backgroundColor);
 }
 
@@ -55,7 +55,7 @@ button {
   border: none;
   background-color: transparent;
   border-radius: 10px;
-  font-family: 'Rethink Sans';
+  font-family: 'Instrument Sans';
 }
 
 .link {
@@ -66,13 +66,13 @@ button {
   padding-bottom: 12px;
   transition: background 0.2s;
   box-sizing: border-box;
-  font-family: 'Rethink Sans';
+  font-family: 'Instrument Sans';
   text-align: left;
   font-size: 14.5px;
 }
 
 h1 {
-  font-family: 'Rethink Sans';
+  font-family: 'Instrument Sans';
 }
 
 h3 {
