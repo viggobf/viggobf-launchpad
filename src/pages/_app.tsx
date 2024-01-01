@@ -26,7 +26,7 @@ function getTimeStr(): string {
     var currentDateHrs = currentDate.getHours().toString()
   }
 
-  var monthText = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Oct', 'Nov', 'Dec'][currentDate.getUTCMonth() - 1]
+  var monthText = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][currentDate.getUTCMonth()]
 
   return monthText
     
