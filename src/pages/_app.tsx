@@ -54,6 +54,6 @@ export default function App({ Component, pageProps }: AppProps) {
 
     <Component {...pageProps} />
 
-    <div className='bottomBar' style={{ textAlign: 'right' }}>{dateTime}</div>
+    <div className='bottomBar' style={{ textAlign: 'right' }}><span style={{float: 'left'}}>Viggo BF Network</span><span style={{ float: 'right' }}>{dateTime}</span></div>
   </span >
 }

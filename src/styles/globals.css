@@ -86,7 +86,7 @@ h2 {
   margin-left: 14px;
   margin-bottom: -10px;
   margin-top: 14px;
-  color: rgb(89, 130, 164)
+  color: rgb(89, 154, 164)
 }
 
 button:hover {
@@ -108,7 +108,7 @@ button:hover {
   :root {
     background-color: rgb(16, 16, 16);
     color: white;
-    --grey: darkgray !important;
+    --grey: rgb(145, 145, 145) !important;
     --backgroundColor: rgb(16, 16, 16) !important;
     --translucentBackgroundColor: rgba(16, 16, 16, 0.75) !important 
   }
